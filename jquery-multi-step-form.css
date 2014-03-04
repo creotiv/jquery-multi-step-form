@@ -1,0 +1,118 @@
+#multistepform {
+    overflow:auto;
+    width:100%;
+    height:100%;
+}
+#multistepform .bg {
+    width:100%;
+    height:100%;
+    background: url(msform_overlay.png);
+    position: absolute;
+    z-index:-5;
+}
+#multistepform .close {
+    background-image: url(msform_sprite.png);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 10000;
+}
+#multistepform-container {
+	max-width: 800px;
+    top:50px;
+	margin: 0px auto;
+	text-align: center;
+	position: relative;
+}
+#multistepform-container .form {
+	background: white;
+	border: 0 none;
+	border-radius: 8px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+    width: 90%;
+    margin: 0 5%;
+	box-sizing: border-box;
+	position: absolute;
+    background: #fff url(footer-bg.png)  0px 100% repeat-x;
+}
+#multistepform-container .form:not(:first-of-type) {
+	display: none;
+}
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+#multistepform-progressbar {
+	margin-bottom: 10px;
+	overflow: hidden;
+	counter-reset: step;
+    text-align:center;
+}
+#multistepform-progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 11px;
+    padding: 0 15px;
+	display:inline-block;
+	position: relative;
+    margin: 0 !important;
+    padding-bottom: 15px;
+}
+#multistepform-progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 12px;
+    margin: 0 auto 5px auto;
+    line-height: 24px;
+}
+#multistepform-progressbar li.active:before,  #multistepform-progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+#multistepform input, #multistepform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#multistepform .button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#multistepform .button:hover, #msform .button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
