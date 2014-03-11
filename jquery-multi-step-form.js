@@ -71,7 +71,7 @@
                 duration: FORM.opts['duration'], 
                 complete: function(){
                     if(!FORM.next_fs[0]) {
-                        $('#'+FORM.opts['container']).hide();
+                        FORM._close();
                     }
 	                FORM.current_fs.hide();
                     FORM.current_fs = FORM.next_fs;
@@ -98,10 +98,13 @@
                 easing: 'easeInOutBack'
             });
         },
-        close: function() {
-            FORM.opts['onClose']();
+        _close: function() {
             $('#'+FORM.opts['container']).hide();
             $('body').css({'overflow':'auto'});
+        },
+        close: function() {
+            FORM.opts['onClose']();
+            FORM._close();
         },
         next: function(){
 	        if(FORM.animating) return false;
