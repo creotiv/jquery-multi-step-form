@@ -19,7 +19,7 @@
         init: function(opts) {
             FORM.opts = $.extend(true, {}, FORM.defaults, opts);
             if(FORM.opts['form_url']) {
-                var cont = $('<div id="'+FORM.opts['container']+'" class="multistepform" style="display:none; position: absolute; top:0; width: 100%; height: 100%; z-index: 9999;"></div>');
+                var cont = $('<div id="'+FORM.opts['container']+'" class="multistepform" style="display:none; position: fixed; top:0; width: 100%; height: 100%; z-index: 9999;"></div>');
                 $('body').append(cont);
                 cont.html('<div id="multistepform"><div class="bg"></div><div class="close"></div><div id="multistepform-container"></div></div>');
                 $.get(FORM.opts['form_url'], function( data ) {
