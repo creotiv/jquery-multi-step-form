@@ -6,9 +6,9 @@
     "forms",
     "multistep",
     "ajax",
-    "progress",
+    "progress"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Andrey Nikishaev",
     "email": "creotiv@gmail.com",
