@@ -1,0 +1,30 @@
+{
+  "name": "multi-step-form",
+  "title": "Multi Step Form",
+  "description": "Mutli step form with automatic partly form POST with progress.",
+  "keywords": [
+    "forms",
+    "multistep",
+    "ajax",
+    "progress",
+  ],
+  "version": "0.1.0",
+  "author": {
+    "name": "Andrey Nikishaev",
+    "email": "creotiv@gmail.com",
+    "url": "https://www.facebook.com/anikishaev"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/creotiv/jquery-multi-step-form/blob/master/MIT-LICENSE.txt"
+    }
+  ],
+  "bugs": "https://github.com/creotiv/jquery-multi-step-form/issues",
+  "homepage": "http://creotiv.github.io/jquery-multi-step-form/",
+  "docs": "https://github.com/creotiv/jquery-multi-step-form/blob/master/README.rst",
+  "download": "https://github.com/creotiv/jquery-multi-step-form/releases",
+  "dependencies": {
+    "jquery": ">=1.7.1"
+  }
+}

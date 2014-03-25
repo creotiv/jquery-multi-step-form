@@ -7,6 +7,7 @@
         next_fs: false, 
         previous_fs: false,
         animating: false,
+        form_html: '',
 
         defaults: {
             container:'',
@@ -26,6 +27,8 @@
                     FORM._show();
                 });
             } else {
+                if(!FORM.form_html) 
+                    FORM.form_html = $('#'+FORM.opts['container']).html();
                 var cont = $('#'+FORM.opts['container']).addClass('multistepform').css({
                     'display':'none', 
                     'position': 'absolute',
@@ -100,6 +103,7 @@
         },
         _close: function() {
             $('#'+FORM.opts['container']).hide();
+            $('#'+FORM.opts['container']).html(FORM.form_html);
             $('body').css({'overflow':'auto'});
         },
         close: function() {
